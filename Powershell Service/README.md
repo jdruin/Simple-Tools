@@ -1,0 +1,3 @@
+I always seem to need this little app but I write a copy and leave it with my employer.  This time  made a little version that I can tweak when I need it.
+All it does is run a PowerShell script on an interval.  It also runs as a service so no need for someone to log in and run it.  This version does not check
+if the script has completed or hung before launching again so only use it on quick or low issue scripts.

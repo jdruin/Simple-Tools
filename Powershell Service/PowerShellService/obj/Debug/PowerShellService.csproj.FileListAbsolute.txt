@@ -1,0 +1,7 @@
+c:\users\jdrui\documents\visual studio 2015\Projects\PowerShellService\PowerShellService\bin\Debug\PowerShellService.exe.config
+c:\users\jdrui\documents\visual studio 2015\Projects\PowerShellService\PowerShellService\bin\Debug\PowerShellService.exe
+c:\users\jdrui\documents\visual studio 2015\Projects\PowerShellService\PowerShellService\bin\Debug\PowerShellService.pdb
+c:\users\jdrui\documents\visual studio 2015\Projects\PowerShellService\PowerShellService\bin\Debug\Topshelf.dll
+c:\users\jdrui\documents\visual studio 2015\Projects\PowerShellService\PowerShellService\obj\Debug\PowerShellService.csprojResolveAssemblyReference.cache
+c:\users\jdrui\documents\visual studio 2015\Projects\PowerShellService\PowerShellService\obj\Debug\PowerShellService.exe
+c:\users\jdrui\documents\visual studio 2015\Projects\PowerShellService\PowerShellService\obj\Debug\PowerShellService.pdb
