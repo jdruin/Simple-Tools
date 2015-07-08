@@ -14,7 +14,8 @@ namespace PowerShellService
     {
         readonly System.Timers.Timer _timer;
         private int _duration;
-
+        private string _pipeLineState;
+        
 
         public scriptRunner()
         {
@@ -27,11 +28,15 @@ namespace PowerShellService
         public void Start() { _timer.Start(); }
         public void Stop() { _timer.Stop(); }
 
-        public static void Run()
+        public void Run()
         {
-            using (var powerShellPipeLine = PowerShell.Create())
+            using (PowerShell powerShellPipeLine = PowerShell.Create())
             {
-                
+
+                if (_pipeLineState == "Running")
+                {
+                    return;
+                }
 
                 try
                 {
@@ -39,11 +44,14 @@ namespace PowerShellService
 
                     string script = File.ReadAllText(scriptPath);
 
+                    powerShellPipeLine.InvocationStateChanged += PowerShellPipeLine_InvocationStateChanged;
+
                     powerShellPipeLine.AddScript(script);
 
                     powerShellPipeLine.Invoke();
 
-
+                    
+                    
                 }
                 catch (Exception except )
                 {
@@ -57,6 +65,9 @@ namespace PowerShellService
 
         }
 
-
+        private void PowerShellPipeLine_InvocationStateChanged(object sender, PSInvocationStateChangedEventArgs e)
+        {
+            _pipeLineState = e.InvocationStateInfo.State.ToString();
+        }
     }
 }
